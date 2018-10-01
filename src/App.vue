@@ -2,27 +2,6 @@
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <form>
-      <div>
-        <h1>Shape</h1>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-3">
-              <img src="m-digital/src/assets/shapes/rectangle.png" alt="rectangle">
-            </div>
-            <div class="col-md-3">
-              <img src="assets/shapes/square.png" alt="square">
-            </div>
-            <div class="col-md-3">
-              <img src="assets/shapes/oval.png" alt="oval">
-            </div>
-            <div class="col-md-3">
-              <img src="assets/shapes/circle.png" alt="circle">
-            </div>
-          </div>
-        </div>
-      </div>
-    </form>
     <div class="steps">
       <div class="step-item is-completed is-success">
         <div class="step-marker">
@@ -34,44 +13,56 @@
           <p class="step-title">Shape</p>
           <p>This is the first step of the process.</p>
         </div>
-      </div>
+      </div><!-- End 1 Step -->
       <div class="step-item is-active">
         <div class="step-marker"></div>
-          <div class="step-details">
-            <p class="step-title">Size</p>
-            <p>This is the second step. You get here once you have completed the first step.</p>
-          </div>
+        <div class="step-details">
+          <p class="step-title">Size</p>
+          <p>This is the second step. You get here once you have completed the first step.</p>
         </div>
-  <div class="step-item">
-    <div class="step-marker">3</div>
-    <div class="step-details">
-      <p class="step-title">Material</p>
-      <p>This is the third step. One more step before the end.</p>
-    </div>
-  </div>
-  <div class="step-item">
-    <div class="step-marker">
-      <span class="icon">
-        <i class="fa fa-flag"></i>
-      </span>
-    </div>
-    <div class="step-details">
-      <p class="step-title">Laminate</p>
-      <p>Final step. You have completed all the previous steps and end the process.</p>
-    </div>
-  </div>
-</div>
-<div class="step-item is-completed is-success">
+      </div><!-- End 2 Step -->
+      <div class="step-item">
+        <div class="step-marker">3</div>
+        <div class="step-details">
+          <p class="step-title">Material</p>
+          <p>This is the third step. One more step before the end.</p>
+      </div><!-- End 3 Step -->
+      </div>
+      <div class="step-item">
         <div class="step-marker">
           <span class="icon">
-            <i class="fa fa-check"></i>
+            <i class="fa fa-flag"></i>
           </span>
         </div>
         <div class="step-details">
-          <p class="step-title">Shape</p>
-          <p>This is the first step of the process.</p>
+          <p class="step-title">Laminate</p>
+          <p>Final step. You have completed all the previous steps and end the process.</p>
         </div>
-      </div>
+      </div><!-- End 4 step -->
+      <div class="step-item">
+        <div class="step-marker">
+          <span class="icon">
+            <i class="fa fa-flag"></i>
+          </span>
+        </div>
+        <div class="step-details">
+          <p class="step-title">Laminate</p>
+          <p>Final step. You have completed all the previous steps and end the process.</p>
+        </div>
+      </div><!-- End 5 step -->
+      <div class="step-item">
+        <div class="step-marker">
+          <span class="icon">
+            <i class="fa fa-flag"></i>
+          </span>
+        </div>
+        <div class="step-details">
+          <p class="step-title">Quantity & Order Details</p>
+          <p>Final step. You have completed all the previous steps and end the process.</p>
+        </div>
+      </div><!-- End 6 step -->
+    </div>
+
   </div>
   
 </template>
