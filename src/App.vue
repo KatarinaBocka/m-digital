@@ -1,93 +1,57 @@
 <template>
-  <div id="app">
-    <!-- <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <div class="steps">
-      <div class="step-item is-completed is-success">
-        <div class="step-marker">
-          <span class="icon">
-            <i class="fa fa-check"></i>
-          </span>
-        </div>
-        <div class="step-details">
-          <p class="step-title">Shape</p>
-          <p>This is the first step of the process.</p>
-        </div>
-      </div><!-- End 1 Step -->
-      <div class="step-item is-active">
-        <div class="step-marker"></div>
-        <div class="step-details">
-          <p class="step-title">Size</p>
-          <p>This is the second step. You get here once you have completed the first step.</p>
-        </div>
-      </div><!-- End 2 Step -->
-      <div class="step-item">
-        <div class="step-marker">3</div>
-        <div class="step-details">
-          <p class="step-title">Material</p>
-          <p>This is the third step. One more step before the end.</p>
-      </div><!-- End 3 Step -->
-      </div>
-      <div class="step-item">
-        <div class="step-marker">
-          <span class="icon">
-            <i class="fa fa-flag"></i>
-          </span>
-        </div>
-        <div class="step-details">
-          <p class="step-title">Laminate</p>
-          <p>Final step. You have completed all the previous steps and end the process.</p>
-        </div>
-      </div><!-- End 4 step -->
-      <div class="step-item">
-        <div class="step-marker">
-          <span class="icon">
-            <i class="fa fa-flag"></i>
-          </span>
-        </div>
-        <div class="step-details">
-          <p class="step-title">Laminate</p>
-          <p>Final step. You have completed all the previous steps and end the process.</p>
-        </div>
-      </div><!-- End 5 step -->
-      <div class="step-item">
-        <div class="step-marker">
-          <span class="icon">
-            <i class="fa fa-flag"></i>
-          </span>
-        </div>
-        <div class="step-details">
-          <p class="step-title">Quantity & Order Details</p>
-          <p>Final step. You have completed all the previous steps and end the process.</p>
-        </div>
-      </div><!-- End 6 step -->
-    </div>
+  <v-app>
+      <v-navigation-drawer fixed v-model="sideNav">
+        <v-list>
+          <v-list-tile>
+          <v-list-tile-action>
+            <i class="fas fa-home"></i>
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title>Home</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+        </v-list>
+      </v-navigation-drawer>
+      <v-toolbar color="primary" dark>
+        <v-toolbar-side-icon class="hidden-sm-and-up" @click="sideNav = !sideNav"></v-toolbar-side-icon>
+        <v-toolbar-title>Project Quote</v-toolbar-title>
+        <v-spacer></v-spacer>
+        <v-toolbar-items class="hidden-xs-only">
+          <v-btn flat>Link 1</v-btn>
+          <v-btn flat>Link 2</v-btn>
+          <v-btn flat>Link 3</v-btn>
+        </v-toolbar-items>
+    </v-toolbar>
+    <v-content>
+      <HelloWorld/>
+    </v-content>
 
-  </div>
-  
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from './components/HelloWorld'
 
 export default {
-  name: 'app',
+  name: 'App',
   components: {
     HelloWorld
+  },
+  data () {
+    return {
+      sideNav: false,
+      // clipped: false,
+      // drawer: true,
+      // fixed: false,
+      // items: [{
+      //   icon: 'fas fa-shapes',
+      //   title: 'Inspire'
+      // }],
+      // miniVariant: false,
+      // right: true,
+      // rightDrawer: false,
+      // title: 'Vuetify.js'
+    }
   }
 }
 </script>
-
-<style style lang="scss" rel="stylesheet/scss">
-@import "../node_modules/bulma/bulma.sass";
-@import "../node_modules/bulma-steps/dist/css/bulma-steps.sass";
-
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

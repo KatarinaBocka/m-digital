@@ -1,4 +1,4 @@
-# m-digital
+# project-quote
 
 ## Project setup
 ```
