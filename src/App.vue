@@ -23,34 +23,23 @@
         </v-toolbar-items>
     </v-toolbar>
     <v-content>
-      <HelloWorld/>
+      <Request/>
     </v-content>
 
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import Request from './components/Request'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Request
   },
   data () {
     return {
       sideNav: false,
-      // clipped: false,
-      // drawer: true,
-      // fixed: false,
-      // items: [{
-      //   icon: 'fas fa-shapes',
-      //   title: 'Inspire'
-      // }],
-      // miniVariant: false,
-      // right: true,
-      // rightDrawer: false,
-      // title: 'Vuetify.js'
     }
   }
 }
