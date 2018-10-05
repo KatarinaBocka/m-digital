@@ -6,9 +6,9 @@
       <v-card color="grey lighten-3" class="mb-5">
         <v-container fluid grid-list-sm>
           <v-layout>
-            <v-flex xs6 sm3 v-for="(imgLabelShape, index) in imgLabelsShapes" :key="`imgLabelShape-${index = index + 2}`">
-              <v-img :src="imgLabelShape.url"></v-img>
-              <p @click="getImgTitle" :data-title="imgLabelShape">{{imgLabelShape.title}}</p>
+            <v-flex xs6 sm3 v-for="(imgLabelShape, index) in imgLabelsShapes" :key="`imgLabelShape-${index = index + 2}`" >
+                <v-img  :src="imgLabelShape.url"  ></v-img>
+                <p @click="getImgTitle" :data-title="imgLabelShape.title">{{imgLabelShape.title}}</p>
             </v-flex>
           </v-layout>
           </v-container>
@@ -243,9 +243,11 @@ export default {
   data () {
     return {
       e6: 1,
-      imgLabelShape: 0,
+      imgLabelShape: {
+        title: ""
+      },
       request: {
-        
+        counter: 0,
         labelDimensions: {
           width: null,
           height: null,
@@ -301,12 +303,16 @@ export default {
     }
   },
   methods: {
-    getImgTitle: (e) => {
-      console.log('Name:', e.target.dataset.title);
-      // this.imgLabelShape.title = e.target.dataset.title;
-      this.imgLabelShape++;
+    getImgTitle: function(e) {
+      // console.log('Name:', e.target.dataset.title);
+      this.imgLabelShape.title = e.target.dataset.title;
+      // console.log("click radi");
+      console.log(this.imgLabelShape.title);
      
     },
+    // increase: () => {
+    //   this.counter++;
+    // }
   }
 }
 </script>

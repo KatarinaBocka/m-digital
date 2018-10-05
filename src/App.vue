@@ -44,3 +44,8 @@ export default {
   }
 }
 </script>
+<style scoped>
+#app {
+  background-image: url("../src/assets/black.jpg")
+}
+</style>
